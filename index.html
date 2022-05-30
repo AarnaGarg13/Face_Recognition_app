@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js" integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="heading1">Face Recognition Web App</h1>
+            <h2 id="heading2">Model is trained to identify the following objects:</h2>
+            <hr>
+            <label class="object">Pillow</label>
+            <br>
+            <hr>
+            <label class="object">Stuff Toy</label>
+            <br>
+            <hr>
+            <label class="object">Reading Book</label>
+            <br>
+            <hr>
+            <label class="object">Myself</label>
+            <br>
+            <hr>
+            <label id="label1">Webcam view:</label>
+            <br>
+            <br>
+            <div id="camera"></div>
+            <br>
+            <div id="result"></div>
+            <br>
+            <button class="btn btn-info" onclick="take_snapshot()">Capture Image</button>
+            <br>
+            <br>
+            <button class="btn btn-success"onclick="identifyImage()">Identify Image</button>
+            <br>
+            <br>
+            <h3 class="oar">Object:<span id="obj_result"></span></h3>
+            <h3 class="oar">Accuracy:<span id="accuracy_result"></span></h3>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
